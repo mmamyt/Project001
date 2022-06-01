@@ -19,5 +19,10 @@ public class TR345Page {
     @FindBy(xpath = "//*[@id=\"layer_cart\"]/div[1]/div[1]/span")
     public WebElement closeTab;
 
+    @FindBy(xpath = "//span[@class=\"ajax_cart_quantity unvisible\"]")
+    public WebElement itemQuantity;
+
+    @FindBy(xpath = "//a[@title=\"View my shopping cart\"]")
+    public WebElement viewCart;
 
 }
