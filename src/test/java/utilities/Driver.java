@@ -15,6 +15,11 @@ public class Driver {
 
     private static WebDriver driver;
 
+    public static WebDriver getReference() {
+        return driver;
+    }
+
+
     public static WebDriver getDriver() {
         if(driver == null){
             switch(Config.getProperty("browser")){
@@ -31,7 +36,7 @@ public class Driver {
                     driver = new EdgeDriver();
                     break;
             }
-            driver.manage().window().maximize();
+            //driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         }
         return driver;
@@ -39,8 +44,9 @@ public class Driver {
 
     public static void closeDriver() {
         if (driver != null) {
-            //driver.close(); //closes one tab
+          //  driver.close(); //closes one tab
             driver.quit(); //closes all tabs
+            driver=null;
         }
     }
 }
