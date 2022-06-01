@@ -3,6 +3,7 @@ package steps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import pages.TR344Page;
 import pages.TR345Page;
 import utilities.Driver;
@@ -22,23 +23,22 @@ public class TR345_steps {
     public void i_have_added_one_product_to_cart() {
         tr345.viewProduct.click();
         tr345.addToCartButton.click();
-
-
-        //tr345.closeTab.click();
-
+        tr345.closeTab.click();
     }
 
-    @Then("the cart will show {int} Product")
+    @Then("the cart will show 1 Product")
     public void the_cart_will_show_product(Integer int1) {
-
+        String one = "1";
+        String actualQuantity = tr345.itemQuantity.getText();
+        Assert.assertTrue(actualQuantity.contains(one));
     }
 
     @When("I open the cart after adding")
     public void i_open_the_cart_after_adding() {
-
+        tr345.viewCart.click();
     }
 
-    @Then("I wan to see the that specific product inside of the card")
+    @Then("I want to see the that specific product inside of the card")
     public void i_wan_to_see_the_that_specific_product_inside_of_the_card() {
 
     }
