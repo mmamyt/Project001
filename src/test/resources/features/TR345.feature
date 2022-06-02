@@ -1,7 +1,7 @@
 Feature: Verify if the user can see the specific product inside of the cart
 
 @TR345
-Scenario: Verifying the cart functionality 2
+Scenario: Verify if the user can see the specific product inside of the cart
 
 Given I am at home page
 And I have added one product to cart

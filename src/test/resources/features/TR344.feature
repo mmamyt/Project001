@@ -1,7 +1,7 @@
 Feature: Verifying if user sees correct message when cart is empty
 
   @TR344
-Scenario: Verifying the cart functionality 1
+Scenario: Verifying if user sees correct message when cart is empty
 Given I am at home page
 And I don’t have a products selected yet
 When I open the cart
