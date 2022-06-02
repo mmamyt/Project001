@@ -4,13 +4,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import pages.TR344Page;
+import org.openqa.selenium.interactions.Actions;
 import pages.TR345Page;
 import utilities.Driver;
-
-
-import java.util.Iterator;
-import java.util.Set;
 
 public class TR345_steps {
     TR345Page tr345 = new TR345Page();
@@ -21,13 +17,14 @@ public class TR345_steps {
 
     @Given("I have added one product to cart")
     public void i_have_added_one_product_to_cart() {
-        tr345.viewProduct.click();
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(tr345.product).perform();
         tr345.addToCartButton.click();
         tr345.closeTab.click();
     }
 
     @Then("the cart will show 1 Product")
-    public void the_cart_will_show_product(Integer int1) {
+    public void the_cart_will_show_product() {
         String one = "1";
         String actualQuantity = tr345.itemQuantity.getText();
         Assert.assertTrue(actualQuantity.contains(one));
