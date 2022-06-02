@@ -1,4 +1,4 @@
-Feature: Verifying the cart functionality 1
+Feature: Verifying if user sees correct message when cart is empty
 
   @TR344
 Scenario: Verifying the cart functionality 1

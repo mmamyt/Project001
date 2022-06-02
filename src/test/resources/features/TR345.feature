@@ -1,4 +1,4 @@
-Feature: Verifying the cart functionality 2
+Feature: Verify if the user can see the specific product inside of the cart
 
 @TR345
 Scenario: Verifying the cart functionality 2
