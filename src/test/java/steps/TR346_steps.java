@@ -14,7 +14,7 @@ public class TR346_steps {
     TR346Page tr346 = new TR346Page();
     Actions actions = new Actions(Driver.getDriver());
 
-    public void i_am_at_home_page() {
+    public void user_is_on_home_page() {
         Driver.getDriver().get("http://automationpractice.com/index.php");
     }
 
