@@ -18,19 +18,19 @@ public class TR346_steps {
         Driver.getDriver().get("http://automationpractice.com/index.php");
     }
 
-    public void i_have_added_one_product_to_cart() {
+    public void user_adds_one_product_to_cart() {
         actions.moveToElement(tr345.product).perform();
         tr345.addToCartButton.click();
         tr345.closeTab.click();
     }
 
-    @When("I hoverover the cart")
-    public void i_hoverover_the_cart() {
+    @When("user hovers over the cart")
+    public void user_hovers_over_the_cart() {
         actions.moveToElement(tr346.hoverOverCart).perform();
     }
 
-    @Then("I see information about the product inside of the cart")
-    public void i_see_information_about_the_product_inside_of_the_cart() {
+    @Then("user sees information about the product inside of the cart")
+    public void user_sees_information_about_the_product_inside_of_the_cart() {
         Assert.assertTrue(tr346.cartBlock.isDisplayed());
     }
 }

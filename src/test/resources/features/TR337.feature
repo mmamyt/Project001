@@ -24,6 +24,6 @@ Feature: Verifying the cart functionality
   Scenario: Verify  user can see information about the product inside of the cart
 
     Given user is on home page
-    And I have added one product to cart
-    When I hoverover the cart
-    Then I see information about the product inside of the cart
+    And user adds one product to cart
+    When user hovers over the cart
+    Then user sees information about the product inside of the cart
