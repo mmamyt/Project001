@@ -13,23 +13,23 @@ public class TR344_steps {
     String expected = "Your shopping cart is empty.";
     TR344Page tr344 = new TR344Page();
 
-    @Given("I am at home page")
-    public void i_am_at_home_page() {
+    @Given("user is on home page")
+    public void user_is_on_home_page() {
         Driver.getDriver().get("http://automationpractice.com/index.php");
     }
 
-    @Given("I don’t have a products selected yet")
-    public void i_don_t_have_a_products_selected_yet() {
+    @Given("user does not have a products selected yet")
+    public void user_does_not_have_a_products_selected_yet() {
         Assert.assertTrue(tr344.emptyCart.isDisplayed());
     }
 
-    @When("I open the cart")
-    public void i_open_the_cart() {
+    @When("user opens the cart")
+    public void user_opens_the_cart() {
         tr344.cart.click();
     }
 
-    @Then("I see message : “ Your shopping cart is empty.”")
-    public void i_see_message_your_shopping_cart_is_empty() {
+    @Then("user sees message : “ Your shopping cart is empty.”")
+    public void user_sees_message_your_shopping_cart_is_empty() {
         String actual = tr344.message.getText();
         Assert.assertTrue(actual.contains(expected));
     }
