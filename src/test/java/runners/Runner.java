@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "steps",
         dryRun = false
-       // tags = "@searchTest3"
+        tags = "@searchTest3"
 )
 
 public class Runner {
