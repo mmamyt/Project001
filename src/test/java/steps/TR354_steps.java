@@ -23,7 +23,6 @@ public class TR354_steps {
     @When("I should be able to see varieties of t-shirts to buy")
     public void i_should_be_able_to_see_varieties_of_t_shirts_to_buy() {
         Assert.assertTrue(tr354.tshirt.isDisplayed());
-
     }
 
 }
