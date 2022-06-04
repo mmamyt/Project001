@@ -10,6 +10,7 @@ import utilities.Driver;
 
 public class TR345_steps {
     TR337Page tr337 = new TR337Page();
+    String expectedProduct = tr337.productName.getText();
 
     public void user_is_on_home_page() {
         Driver.getDriver().get("http://automationpractice.com/index.php");
@@ -37,7 +38,8 @@ public class TR345_steps {
 
     @Then("user sees that specific product inside of the cart")
     public void user_sees_that_specific_product_inside_of_the_cart() {
-
+        String productInCart = tr337.checkoutProduct.getText();
+        Assert.assertTrue(productInCart.contains(expectedProduct));
     }
 
 }

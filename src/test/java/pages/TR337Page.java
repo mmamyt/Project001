@@ -46,4 +46,11 @@ public class TR337Page {
 
     @FindBy(xpath = "//div[@class=\"cart_block_list\"]")
     public WebElement cartBlock;
+
+    @FindBy(xpath = "//*[@id=\"homefeatured\"]/li[1]/div/div[2]/h5/a")
+    public WebElement productName;
+
+    @FindBy(xpath = "//*[@id=\"product_1_1_0_0\"]/td[2]")
+    public WebElement checkoutProduct;
+
 }
