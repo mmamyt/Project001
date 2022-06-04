@@ -1,3 +1,4 @@
+@Regression
 @searchTest
 Feature: Verify MyStore Webapp Search Functionality
 

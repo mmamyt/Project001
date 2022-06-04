@@ -34,6 +34,6 @@ public class TR344_steps {
       String s = tr337.message.getCssValue("background-color");
       String c = Color.fromString(s).asHex();
       String orange = "#fe9126";
-      Assert.assertTrue(c.equals(orange));
+      Assert.assertEquals("Failed", c, orange);
     }
 }
