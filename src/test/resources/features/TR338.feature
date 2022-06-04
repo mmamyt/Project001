@@ -2,15 +2,11 @@
   Feature: As a user I want to be able to buy a product
 
     @TR357
-    Scenario: As a user I want to be navigated to SHOPPING-CART SUMMARY page upon checkout
+    Scenario: As a user I want to be brought to sign in page
       Given user is on home page
       And user adds one product to cart
       When user clicks checkout
       Then the user will be navigated to SHOPPING-CART SUMMARY page
-
-    @TR358
-    Scenario: As a user I want to be brought to sign in page
-      Given user is on summary page
       When the user clicks on Proceed to checkout
       Then user should be brought to sign in page
 
@@ -34,16 +30,3 @@
       Then user will see the confirmation button
       When user clicks on confirm order
       Then the text “Your order on My Store is complete.” will be displayed
-
-    @TR
-    Scenario: (Positive Login Scenario) As a user I want to be able to login upon entering valid credentials
-      Given user is on sign in page
-      When user enters valid credentials in Already registered block
-      Then user should be able to login without issues
-
-    @TR
-    Scenario: (Negative Login Scenario) User should not be able to login with incorrect credentials
-      Given user is on sign in page
-      When user enters invalid credentials in Already registered block
-      Then user should NOT be able to login
-      And user should see warning message
