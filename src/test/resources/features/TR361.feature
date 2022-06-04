@@ -1,3 +1,4 @@
+@Regression
 @TR361
 Feature: Contact us functionality
 

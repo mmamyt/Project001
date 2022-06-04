@@ -1,3 +1,4 @@
+@Regression
 @TR337
 
 Feature: Verifying the cart functionality

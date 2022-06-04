@@ -1,3 +1,4 @@
+@Regression
 @TR354
 Feature: My store search verification
 
