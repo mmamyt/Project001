@@ -19,7 +19,6 @@ public class SearchSteps {
     @Given("user is on home page")
     public void user_is_on_home_page() {
         Driver.getDriver().get(Config.getProperty("link"));
-
     }
 
     @When("user search for any {string}")

@@ -13,7 +13,7 @@ import pages.TR338Page;
 import utilities.Driver;
 
 public class TR359_steps{
-    TR358_steps tr358 = new TR358_steps();
+    TR357_steps tr357 = new TR357_steps();
     TR338Page tr338 = new TR338Page();
     Actions actions = new Actions(Driver.getDriver());
     WebDriverWait wait = new WebDriverWait(Driver.getDriver(),5);
@@ -26,12 +26,16 @@ public class TR359_steps{
     String city = faker.address().city();
     String zipCode = faker.address().zipCode();
     String mobilePhone = faker.phoneNumber().cellPhone();
+    SearchSteps homePage = new SearchSteps();
 
     @Given("user is on sign in page")
     public void user_is_on_sign_in_page() {
-        tr358.user_is_on_summary_page();
-        tr358.the_user_clicks_on_proceed_to_checkout();
-        tr358.user_should_be_brought_to_sign_in_page();
+        homePage.user_is_on_home_page();
+        tr357.user_adds_one_product_to_cart();
+        tr357.user_clicks_checkout();
+        tr357.the_user_will_be_navigated_to_shopping_cart_summary_page();
+        tr357.the_user_clicks_on_proceed_to_checkout();
+        tr357.user_should_be_brought_to_sign_in_page();
     }
 
     @When("user inputs a valid email in the create an account block")
