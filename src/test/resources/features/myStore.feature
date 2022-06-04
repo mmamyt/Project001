@@ -1,3 +1,4 @@
+@searchTest
 Feature: Verify MyStore Webapp Search Functionality
 
   @searchTest1

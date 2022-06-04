@@ -28,8 +28,8 @@ public class TR361_steps {
        tr361.customerServiceOption.click();
       tr361.email.sendKeys("example@gmail.com");
       tr361.referenceOrder.sendKeys("12123212");
-      tr361.chooseFile.sendKeys("/Users/anisakalonova/Desktop/Screen Shot 2022-06-03 at 11.02.46 PM.png");
-      tr361.chooseFile.click();
+      //tr361.chooseFile.sendKeys("");
+      //tr361.chooseFile.click();
       tr361.messageBox.sendKeys("Hello, Please see my attachment for my order");
       tr361.sendBtn.click();
     }

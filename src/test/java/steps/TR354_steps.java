@@ -4,7 +4,6 @@ import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import pages.TR345Page;
 import pages.TR354Page;
 import utilities.Driver;
 
